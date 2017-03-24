@@ -1,0 +1,17 @@
+.course{
+    min-height: 750px;
+}
+.course .courseSort{
+    margin: auto;
+    text-align: center;
+    padding-top: 40px;
+    min-height: 750px;
+}
+.course .courseSort .allContent{
+    padding-top: 40px;
+}
+.course .courseSort .allContent table{
+    margin: auto;
+    text-align: center;
+    font-size: 16px;
+}

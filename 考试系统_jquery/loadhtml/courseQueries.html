@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*替换内容*/
+        $('.filter-block ul li').on('click', function () {
+            selectFilter(this);
+        })
+        function selectFilter(obj) {
+            var item = $(obj);
+            var block = item.parents('.filter-block');
+            var value = item.attr('data-value');
+            console.log(value)
+            if (value) {
+                block.find('.hidden-value').val(value);
+                block.find('.sort-name').text(item.text()).addClass('selected');
+                block.find('.sort-name').text(item.text()).attr('data-value',value);
+            }else if(item.attr('data-default')){
+                block.find('.hidden-value').val('');
+                block.find('.sort-name').text(item.attr('data-default')).removeClass('selected');
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="course">
+    <div class="courseSort">
+        <span>学年学期 &nbsp;&nbsp;</span><div class="btn-group filter-block">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sort-name">2016-2017学年 </span><span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li data-value="1"><a href="#">2016-2017学年第二学期</a></li>
+            <li data-value="1"><a href="#">2016-2017学年第一学期</a></li>
+            <li data-value="2"><a href="#">2015-2016学年第二学期</a></li>
+            <li data-value="2"><a href="#">2015-2016学年第一学期</a></li>
+            <li data-value="3"><a href="#">2014-2015学年第二学期</a></li>
+            <li data-value="3"><a href="#">2014-2015学年第一学期</a></li>
+            <li data-value="4"><a href="#">2013-2014学年第二学期</a></li>
+            <li data-value="4"><a href="#">2013-2014学年第一学期</a></li>
+        </ul>
+    </div>
+        <span>行政班级 &nbsp;&nbsp;</span><div class="btn-group filter-block">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="sort-name">13级信计一班</span><span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li data-value="1"><a href="#">13级信计一班</a></li>
+                <li data-value="2"><a href="#">13级金融二班</a></li>
+                <li data-value="3"><a href="#">13级数应三班</a></li>
+                <li data-value="4"><a href="#">13级数应四班</a></li>
+            </ul>
+        </div>
+        <button type="button" class="btn btn-default btn-lg">
+            查询 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        </button>
+
+        <div class="allContent">
+            <table border="1">
+                <tbody>
+                <tr>
+                    <td>序号</td>
+                    <td>课程</td>
+                    <td>学分</td>
+                    <td>考核方式</td>
+                    <td>平时成绩</td>
+                    <td>期末成绩</td>
+                    <td>备注</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>大学英语</td>
+                    <td>2.0</td>
+                    <td>考试</td>
+                    <td>90.0</td>
+                    <td>89.0</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>大学物理</td>
+                    <td>1.0</td>
+                    <td>考试</td>
+                    <td>93.0</td>
+                    <td>80.0</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

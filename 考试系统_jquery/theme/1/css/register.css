@@ -1,0 +1,139 @@
+body{
+    font-size:18px;
+    font-family:'Microsoft YaHei';
+}
+
+button{
+    border:none;
+    font-family:'Microsoft YaHei';
+}
+
+input:focus{
+    outline:none;
+}
+
+a:hover, a:visited, a:link, a:active {
+    text-decoration:none;
+    color:inherit;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+
+.background{
+    display: block;
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: -1;
+}
+
+.background img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+}
+
+.main{
+    width:550px;
+    margin:auto;
+    margin-top:46px;
+}
+
+.tips{
+    color:white;
+}
+
+.tips .back{
+    float:left;
+}
+
+.tips .have{
+    float:right;
+}
+
+.tips .have p{
+    display:inline-block;
+}
+
+.tips .have a{
+    font-size:18px;
+    color:white;
+    border:1px solid white;
+    padding:7px 15px;
+    border-radius:3px;
+}
+
+.fillIn{
+    background-color:rgba(255,255,255,0.5);
+    padding:55px 62px;
+    text-align:center;
+}
+
+.fillIn form{
+    text-align:left;
+    margin-top: 40px;
+}
+
+.fillIn form .inputStyle{
+    position:relative;
+    margin-bottom:10px;
+    border:1px solid #dcdcdc;
+    border-radius:5px;
+    height:45px;
+}
+
+.fillIn form input{
+    height:42px;
+    width:69%;
+    border:none;
+    border-radius:5px;
+    margin-left:14px;
+    font-family:'Microsoft YaHei';
+    font-size:14px;
+    background-color: rgba(255,255,255,-0.5);
+}
+
+.fillIn #btnSendMessage{
+    height:34px;
+    width:100px;
+    background-color:#eeeeee;
+    color:#3e3e3e;
+    position:absolute;
+    right:8px;
+    top:5px;
+    font-family:'Microsoft YaHei';
+    cursor:pointer;
+}
+
+#submit{
+    width:100%;
+    margin-top:20px;
+    background-color:#f25045;
+    margin-left:0;
+    font-size:24px;
+    color:white;
+    height:46px;
+    cursor:pointer;
+    text-align:center;
+    border-radius:5px;
+}
+
+#submit p{
+    line-height:46px;
+    font-weight: bold;
+}
+
+.warning{
+    color:#e4393c;
+    font-size:14px;
+}

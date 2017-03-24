@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="framework/jar/easyui.css" >
+    <link rel="stylesheet" type="text/css" href="framework/jar/icon.css">
+    <link rel="stylesheet" type="text/css" href="framework/jar/demo.css">
+    <script src="framework/jar/jquery.min.js"></script>
+    <script src="framework/jar/jquery.easyui.min.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/login.js"></script>
+</head>
+<body style="text-align: center">
+    <div class="easyui-panel" style="width: 400px;padding: 50px 60px; border-radius: 20px; position:absolute; left: 500px; top: 200px;">
+        <div style="margin-bottom: 20px">
+            <input id="username" class="easyui-textbox" prompt="Username" iconWidth="28" style="width: 100%;height: 34px;padding: 10px;" onblur="test()">
+        </div>
+        <div style="margin-bottom: 20px">
+            <input id="password" class="easyui-passwordbox" prompt="Password" iconWidth="28" style="width: 100%;height: 34px; padding: 10px;">
+        </div>
+
+       <div style="margin:20px 0;">
+            <button  class="easyui-linkbutton" ><!--onclick="$('#sb').switchbutton('disable')"-->登录</button>
+            <button  class="easyui-linkbutton" ><!--onclick="$('#sb').switchbutton('enable')"-->显示</button>
+           <a href="addStu.html" class="easyui-linkbutton l-btn l-btn-small">注册</a>
+        </div>
+
+    </div>
+    <input id="sb" class="easyui-switchbutton" checked style="width:100px;height:30px">
+</body>
+</html>

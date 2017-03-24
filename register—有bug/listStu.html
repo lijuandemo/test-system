@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="framework/jar/easyui.css" >
+    <link rel="stylesheet" type="text/css" href="framework/jar/icon.css">
+    <link rel="stylesheet" type="text/css" href="framework/jar/demo.css">
+    <script src="framework/jquery.min.js"></script>
+    <script src="framework/jar/jquery.easyui.min.js"></script>
+    <link rel="stylesheet" href="css/listStu.css">
+    <script src="js/db.js"></script>
+    <script src="js/list.js"></script>
+</head>
+<body class="easyui-panel">
+    <header>学生信息</header>
+    <article>
+        <section>
+            <input type="search" name="search" class="easyui-textbox">
+            <button class="easyui-linkbutton" >点击搜索</button>
+        </section>
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>选择</th>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>年龄</th>
+                        <th>生源地</th>
+                        <th>删除操作</th>
+                        <th>修改操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr hidden>
+                        <td><input type="checkbox" class=""></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button>删除</button></td>
+                        <td><button>修改</button></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <button class="easyui-linkbutton" ><a href="addStu.html">添加</a></button><button class="easyui-linkbutton" >删除</button><button class="easyui-linkbutton"><a href="changeStu.html"> 修改</a></button>
+        </section>
+    </article>
+</body>
+</html>

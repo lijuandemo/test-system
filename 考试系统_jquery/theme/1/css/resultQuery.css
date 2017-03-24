@@ -1,0 +1,42 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 微软雅黑;
+}
+.reaultQuery{
+    margin: auto;
+    text-align: center;
+    padding-top: 40px;
+    min-height: 750px;
+}
+.reaultQuery .reaContent{
+    width: 800px;
+    margin: auto;
+}
+.reaultQuery .stuQuer{
+    font-family: 微软雅黑;
+    font-size: 30px;
+}
+.reaultQuery .stuInfo{
+    font-size: 12px;
+    padding-top: 15px;
+}
+.reaultQuery .subject{
+    font-size: 12px;
+    padding-top: 15px;
+}
+.reaultQuery .reaContent .btnCont{
+    text-align: center;
+    padding-top: 30px;
+}
+.reaultQuery .reaContent .allContent{
+    padding-top: 40px;
+}
+.reaultQuery .reaContent .allContent table{
+    margin: auto;
+    text-align: center;
+    font-size: 16px;
+}
+.btn-lg{
+    font-size: 10px;
+}

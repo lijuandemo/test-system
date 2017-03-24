@@ -1,0 +1,25 @@
+
+header{
+    text-align: center;
+}
+table{
+    width: 300px;
+    border-collapse: collapse;
+    margin: auto;
+}
+table td{
+    border: 1px solid lavender;
+    line-height: 30px;
+    text-align: center;
+}
+.one{
+    width: 30%;
+}
+.two{
+    width: 70%;
+}
+footer{
+    text-align: center;
+    margin-top:400px;
+    background-color: lightcyan;
+}

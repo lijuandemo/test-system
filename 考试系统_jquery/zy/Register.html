@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../theme/1/css/register.css" rel="stylesheet">
+</head>
+<body>
+<div class="background">
+    <img src="../theme/1/images/register/register_bg.jpg"/>
+</div>
+
+<div class="main">
+    <!--已有账号马上登陆-->
+    <div class="tips">
+        <p class="back"><a href="/">返回星房网首页</a></p>
+
+        <div class="have">
+            <p>已有星房账号？</p>
+            <a href="/login">马上登录</a>
+        </div>
+
+        <div style="clear:both"></div>
+    </div>
+
+    <!--注册页面主体-->
+    <div class="fillIn">
+        <img src="/UA/images/register/logo.jpg"/>
+        <form id="form1" action="/register/submit" method="post">
+            <div class="telephoneNumber">
+                <div class="inputStyle">
+                    <input type="tel" name="tel" value="" id="txtTel" placeholder="请输入手机号" />
+                    <input type="button" id="btnSendMessage" value="发送验证码 " />
+                </div>
+            </div>
+
+            <div class="identifyingCode">
+                <div class="inputStyle">
+                    <input type="tel" name="code" value="" placeholder="请输入短信验证码" />
+                </div>
+            </div>
+
+            <div class="nickName">
+                <div class="inputStyle">
+                    <input type="text" name="name" value="" placeholder="昵称" />
+                </div>
+            </div>
+
+            <div class="password">
+                <div class="inputStyle">
+                    <input type="password" name="pwd" value="" placeholder="请输入密码" />
+                </div>
+            </div>
+
+            <div class="newPassword">
+                <div class="inputStyle">
+                    <input type="password" name="confirm" value="" placeholder="请确认新密码" />
+                </div>
+            </div>
+            <div id="submit" onmousedown="mouseDown()" onmouseup="mouseUp()" onmouseover="mouseOver()" onmouseout="mouseOut()">
+                <p>注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;册</p>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

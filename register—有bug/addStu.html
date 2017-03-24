@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/add.css">
+    <script src="framework/jquery.min.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/add.js"></script>
+</head>
+<body>
+<header>学生信息添加</header>
+<article>
+    <form action="javascript:void(0)">
+
+    <table>
+        <tr>
+            <td>用户名</td>
+            <td class="two"><input type="text" id="username"></td>
+        </tr>
+        <tr>
+            <td>密码</td>
+            <td class="two"><input type="password" id="password"></td>
+        </tr>
+        <tr>
+            <td class="one">id</td>
+            <td class="two"><input type="number" id="id" required></td>
+        </tr>
+        <tr>
+            <td>name</td>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <td>sex</td>
+            <td>男<input type="radio" name="sex" value="男">女<input type="radio" name="sex" value="女"></td>
+        </tr>
+        <tr>
+            <td>age</td>
+            <td><input type="number" id="age"></td>
+        </tr>
+        <tr>
+            <td>address</td>
+            <td>
+                <input type="text" list="add" id="address">
+                <datalist id="add">
+                    <option>山东</option>
+                    <option>甘肃</option>
+                    <option>广西</option>
+                    <option>浙江</option>
+                </datalist>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="提交">
+                <button><a href="login1.html">返回</a> </button>
+            </td>
+        </tr>
+    </table>
+
+    </form>
+</article>
+<footer>
+    <small>@杰普web1605 &nbap;&emsp;更新时间2016年10月31</small>
+</footer>
+
+    <script>
+
+    </script>
+</body>
+</html>

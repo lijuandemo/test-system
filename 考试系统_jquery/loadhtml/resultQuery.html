@@ -1,0 +1,90 @@
+
+<script>
+    /*替换内容*/
+    $('.filter-block ul li').on('click', function () {
+        selectFilter(this);
+    })
+    function selectFilter(obj) {
+        var item = $(obj);
+        var block = item.parents('.filter-block');
+        var value = item.attr('data-value');
+        console.log(value)
+        if (value) {
+            block.find('.hidden-value').val(value);
+            block.find('.sort-name').text(item.text()).addClass('selected');
+            block.find('.sort-name').text(item.text()).attr('data-value',value);
+        }else if(item.attr('data-default')){
+            block.find('.hidden-value').val('');
+            block.find('.sort-name').text(item.attr('data-default')).removeClass('selected');
+        }
+    }
+
+
+</script>
+
+<div class="reaultQuery">
+    <div class="reaContent">
+    <div class="stuQuer">学生成绩查询</div>
+    <div class="stuInfo">姓名:<span class="name">李娟</span> &nbsp;&nbsp;学号:<span class="id">1309401023</span>&nbsp;&nbsp;系部/院部:<span class="subject">数学与计算科学学院</span></div>
+<div class="btnCont">
+        <!-- Single button -->
+    <span>学年&nbsp;&nbsp;</span><div class="btn-group filter-block">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="sort-name">2016-2017学年 </span><span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li data-value="1"><a href="#">2016-2017学年</a></li>
+                <li data-value="2"><a href="#">2015-2016学年</a></li>
+                <li data-value="3"><a href="#">2014-2015学年</a></li>
+                <li data-value="4"><a href="#">2013-2014学年</a></li>
+            </ul>
+        </div>
+   <span>学期 &nbsp;&nbsp;</span><div class="btn-group filter-block">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <span class="sort-name">第一学期</span> <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li data-value="one"><a href="#"> 第一学期 </a></li>
+            <li data-value="two"><a href="#"> 第二学期 </a></li>
+        </ul>
+    </div>
+    <button type="button" class="btn btn-default btn-lg">
+       检索 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+    </button>
+</div>
+        <div class="allContent">
+            <table border="1">
+                <tbody>
+                <tr>
+                    <td>序号</td>
+                    <td>课程</td>
+                    <td>学分</td>
+                    <td>考核方式</td>
+                    <td>平时成绩</td>
+                    <td>期末成绩</td>
+                    <td>备注</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>大学英语</td>
+                    <td>2.0</td>
+                    <td>考试</td>
+                    <td>90.0</td>
+                    <td>89.0</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>大学物理</td>
+                    <td>1.0</td>
+                    <td>考试</td>
+                    <td>93.0</td>
+                    <td>80.0</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

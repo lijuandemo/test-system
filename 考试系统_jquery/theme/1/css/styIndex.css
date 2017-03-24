@@ -1,0 +1,13 @@
+.styMain{
+    min-height: 750px;
+}
+.styMain .wel{
+    padding: 20px 20px;
+}
+.styMain .imgContent{
+   margin: auto;
+    text-align: center;
+}
+.styMain .imgContent img{
+    margin-top: 30px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>indexedDB</title>
+</head>
+<body>
+    <button>点击创建仓库</button>
+    <button>点击查询</button>
+    <button>点击删除</button>
+<script>
+    window.onload=function () {
+        function Student(id,name,sex) {
+            this.id=id;
+            this.name=name;
+            this.sex=sex;
+        }
+        var but=document.getElementsByTagName('button');
+        but[0].onclick=function(){
+            //数据库  版本只能越来越高  不能变低
+            //查看系统调用的参数
+            var req=window.indexedDB.open("web1605",7 );
+            console.log(req);
+            req.onupgradeneeded=function (event) {
+                console.log('更新成功')//检查数据库更新后调用
+                console.log(event);
+                console.log(event.oldVersion)
+                console.log(event.newVersion)
+                //创建存储数据的仓库   表
+                var db=event.target.result;
+                console.log(db);
+                console.log(db.objectStoreNames.contains('student'))
+                if(db.objectStoreNames.contains('student')){
+                    db.deleteObjectStore('student');
+                    console.log('删除原表')
+                }
+                var store=db.createObjectStore('student',{keyPath:'id',autoIncrement:"true"});
+                console.log(store);
+            }
+            req.onsuccess=function (event) {
+
+                console.log(event.target)
+                var db=event.target.result;
+                console.log(db.transaction);
+                var tran=db.transaction('student','readwrite');
+                var store=tran.objectStore('student');
+                console.log(store);
+                var stu=new Student(1,'lisi','男');
+                var req=store.put(stu);
+                console.log(req);
+
+            }
+            req.onerror=function () {
+                console.log('出错了')
+            }
+
+
+        }
+        but[1].onclick=function(){
+
+            var req=window.indexedDB.open('web1605',7);
+            //获取数据库对象-------transaction------------
+            req.onupgradeneeded=function (event) {
+
+            }
+            req.onsuccess=function (event) {
+                alert()
+                var db=event.target.result;
+                var tran=db.transaction('student','readonly');
+                var store=tran.objectStore('student');
+                var req=store.get(1);
+                console.log(req);
+                req.onsuccess=function (event) {
+                    var result=event.target.result;
+                    console.log(result);
+                }
+
+            }
+            req.onerror=function (event) {
+
+            }
+        }
+        but[2].onclick=function () {
+            var req=window.indexedDB.open('web1605',7);
+            req.onsuccess=function (event) {
+              var tran=  event.target.result.transaction('student','readwrite');
+              var store=tran.objectStore('student');
+              var req=store.delete(1);
+                req.onsuccess=function (event) {
+                    console.log(event) ;
+                }
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
